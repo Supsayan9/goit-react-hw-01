@@ -1,25 +1,26 @@
-import './Profile.css';
+import styles from './Profile.module.css';
+
 const Profile = ({ name, tag, location, image, stats }) => {
   return (
-    <div className="div-sec">
+    <div className={styles['div-sec']}>
       <div>
-        <div className="photo-container">
-          <img className="photo" src={image} alt="User avatar" />
+        <div className={styles['photo-container']}>
+          <img className={styles['photo']} src={image} alt="User avatar" />
         </div>
         <p>{name}</p>
         <p>@{tag}</p>
         <p>{location}</p>
       </div>
-      <ul className="stats-list">
-        <li className="stats-list-item">
+      <ul className={styles['stats-list']}>
+        <li className={styles['stats-list-item']}>
           <span>Followers</span>
           <span>{stats.followers}</span>
         </li>
-        <li className="stats-list-item">
+        <li className={styles['stats-list-item']}>
           <span>Views</span>
           <span>{stats.views}</span>
         </li>
-        <li className="stats-list-item">
+        <li className={styles['stats-list-item']}>
           <span>Likes</span>
           <span>{stats.likes}</span>
         </li>
